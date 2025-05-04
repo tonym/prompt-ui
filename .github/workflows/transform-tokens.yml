@@ -1,0 +1,52 @@
+name: Transform tokens
+
+on:
+  push:
+    paths:
+      - 'packages/tokens/src/tokens/tokens.json'
+
+jobs:
+  transform:
+    runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/main'
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v3
+        with:
+          version: 8.14.0
+
+      - name: Install dependencies
+        run: pnpm install
+
+      - name: Configure git
+        run: |
+          git config --global user.email "build@designsystemsmindset.com"
+          git config --global user.name "transform"
+
+      - name: Run token transformation
+        run: pnpm run transform:tokens
+
+      - name: Commit and push changes
+        run: |
+          git checkout -B token_transform
+          git add .
+          git commit --allow-empty -m 'Update transformed tokens'
+          git push origin token_transform
+        # Uncomment below and comment out the `git push` line above if you prefer to create a Pull Request instead of direct push:
+        # - name: Create Pull Request
+        #   uses: peter-evans/create-pull-request@v5
+        #   with:
+        #     token: ${{ secrets.TOKEN_TRANSFORM_USER }}
+        #     branch: token_transform
+        #     title: 'Update transformed tokens'
+        #     body: 'Automated token transformation update'
+        #     commit-message: 'Update transformed tokens'
+        #     base: main
+        env:
+          GH_TOKEN: ${{ secrets.TOKEN_TRANSFORM_USER }}

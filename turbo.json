@@ -1,0 +1,19 @@
+{
+  "tasks": {
+    "build": {
+      "dependsOn": ["^build"],
+      "outputs": ["dist/**"],
+      "inputs": ["src/**", "tsconfig.json", "../../tsconfig.base.json"]
+    },
+    "dev": {
+      "cache": false
+    },
+    "start": {
+      "cache": false,
+      "dependsOn": []
+    },
+    "lint": {
+      "inputs": ["src/**", "*.ts", "*.tsx"]
+    }
+  }
+}

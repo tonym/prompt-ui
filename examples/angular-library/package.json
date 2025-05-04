@@ -1,0 +1,22 @@
+{
+  "name": "@prompt-ui/angular-library",
+  "version": "0.1.0",
+  "description": "An example of a traditional Angular component library generated using PromptUI",
+  "private": true,
+  "main": "./index.ts",
+  "types": "./index.ts",
+  "scripts": {
+    "build": "tsc --project tsconfig.json"
+  },
+  "dependencies": {
+    "@prompt-ui/core": "workspace:*",
+    "@prompt-ui/tokens": "workspace:*"
+  },
+  "peerDependencies": {
+    "@angular/core": "^17.0.0",
+    "@angular/common": "^17.0.0"
+  },
+  "devDependencies": {
+    "typescript": "^5.2.0"
+  }
+}

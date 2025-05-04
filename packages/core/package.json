@@ -1,0 +1,15 @@
+{
+  "name": "@prompt-ui/core",
+  "version": "0.1.0",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "dependencies": {
+    "redux": "^5.0.1"
+  },
+  "scripts": {
+    "clean": "rimraf dist .turbo coverage stroybook-static",
+    "build": "pnpm run clean && tsc --build",
+    "dev": "tsc --watch",
+    "test": "jest"
+  }
+}

@@ -1,0 +1,90 @@
+@use '../../theme/variables' as *;
+
+button {
+  font-family: inherit;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+  border-radius: $border-radius-medium;
+
+  &.full-width {
+    width: 100%;
+  }
+
+  &.is-disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+  }
+
+  // Appearance variants
+  &.appearance-solid {
+    background-color: $intent-primary-background;
+    border: none;
+  }
+
+  &.appearance-outline {
+    background-color: transparent;
+    border: 1px solid $intent-primary-border;
+  }
+
+  &.appearance-ghost {
+    background-color: transparent;
+    border: none;
+    color: $intent-primary-text;
+  }
+
+  // Size variants
+  &.size-small {
+    padding: $spacing-small $spacing-medium;
+    font-size: $font-size-small;
+  }
+
+  &.size-medium {
+    padding: $spacing-medium $spacing-large;
+    font-size: $font-size-medium;
+  }
+
+  &.size-large {
+    padding: $spacing-large $spacing-xl;
+    font-size: $font-size-large;
+  }
+
+  // Intent variants
+  &.intent-primary {
+    background-color: $intent-primary-background;
+    color: $intent-primary-text;
+  }
+
+  &.intent-secondary {
+    background-color: $intent-secondary-background;
+    color: $intent-secondary-text;
+  }
+
+  &.intent-success {
+    background-color: $intent-success-background;
+    color: $intent-success-text;
+  }
+
+  &.intent-warning {
+    background-color: $intent-warning-background;
+    color: $intent-warning-text;
+  }
+
+  &.intent-danger {
+    background-color: $intent-danger-background;
+    color: $intent-danger-text;
+  }
+
+  &.intent-info {
+    background-color: $intent-info-background;
+    color: $intent-info-text;
+  }
+
+  &.intent-neutral {
+    background-color: $intent-neutral-background;
+    color: $intent-neutral-text;
+  }
+}

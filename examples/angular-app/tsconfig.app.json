@@ -1,0 +1,12 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "composite": false,
+    "declaration": false,
+    "outDir": "./out-tsc/app",
+    "types": [],
+    "preserveSymlinks": true
+  },
+  "include": ["src/**/*.ts", "../../packages/core/dist/**/*.ts", "../../packages/tokens/dist/**/*.ts"],
+  "exclude": ["**/*.spec.ts", "**/*.test.ts"]
+}

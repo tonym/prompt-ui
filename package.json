@@ -1,0 +1,45 @@
+{
+  "name": "prompt-ui",
+  "version": "0.1.0",
+  "private": true,
+  "description": "A framework-agnostic, AI-integrated design system built around prompt-driven UI generation.",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tonym/ai-ds-sandbox.git"
+  },
+  "packageManager": "pnpm@8.15.4",
+  "workspaces": [
+    "packages/*",
+    "apps/*"
+  ],
+  "devDependencies": {
+    "@angular/cli": "^19.2.9",
+    "@eslint/js": "^9.25.1",
+    "@testing-library/jest-dom": "^6.6.3",
+    "@types/jest": "^29.5.14",
+    "@types/node": "^22.15.3",
+    "eslint": "^9.25.1",
+    "jest": "^29.7.0",
+    "jest-environment-jsdom": "^29.7.0",
+    "prettier": "^3.5.3",
+    "rimraf": "^6.0.1",
+    "style-dictionary": "^4.4.0",
+    "token-transformer": "^0.0.33",
+    "ts-jest": "^29.3.2",
+    "turbo": "^2.5",
+    "typescript": "^5.4.5",
+    "typescript-eslint": "^8.31.0"
+  },
+  "scripts": {
+    "build": "turbo run build",
+    "dev": "turbo run dev",
+    "lint": "turbo run lint",
+    "lint:fix": "eslint . --ext .ts,.tsx --fix",
+    "test": "jest --maxWorkers=50%",
+    "test:watch": "jest --watch --maxWorkers=25%",
+    "test:coverage": "jest --coverage",
+    "test:dev": "jest --clearCache && jest --coverage --maxWorkers=50%",
+    "format": "prettier --write .",
+    "transform:tokens": "node ./scripts/transformTokens.mjs"
+  }
+}
