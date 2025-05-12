@@ -1,8 +1,10 @@
 # PromptUI
 
+[Read about how PromptUI works](https://www.designsystemscollective.com/how-ai-integrated-design-systems-and-generative-component-libraries-work-a060897b8abb?source=friends_link&sk=e544b72669ae7838be2ad5e5d5abd8d8)
+
 ## AI-Integrated Design System Sandbox
 
-Welcome to the PromptUI, an AI-integrated design system.
+Welcome to PromptUI, an AI-integrated design system.
 
 This project explores a new architecture for design systems, built around the assumption that AI agents are part of the development and build toolchain. Unlike traditional design systems that ship fully-rendered components, this system provides **declarative component placeholders**, **composable token infrastructure**, and **AI-resolvable prompts** to generate real, framework-specific code at build time.
 
