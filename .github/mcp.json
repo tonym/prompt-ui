@@ -1,0 +1,22 @@
+{
+  "mcp": {
+    "servers": {
+      "github": {
+        "type": "http",
+        "url": "https://api.githubcopilot.com/mcp/",
+        "headers": {
+          "Authorization": "Bearer ${env:MCP_PAT}"
+        }
+      }
+    },
+    "libraries": [
+      {
+        "id": "core",
+        "name": "PromptUI Core Manifests",
+        "components": {
+          "globs": ["packages/core/src/components-mcp/**/*.json"]
+        }
+      }
+    ]
+  }
+}
