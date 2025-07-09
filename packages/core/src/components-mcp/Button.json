@@ -1,1 +1,63 @@
-{}
+{
+  "name": "Button",
+  "description": "A standard interactive button component supporting appearance, variant, size, behavioral intent, and layout options.",
+  "tags": ["action", "form", "control"],
+  "props": [
+    {
+      "name": "appearance",
+      "type": "'solid' | 'outline' | 'ghost'",
+      "default": "solid",
+      "description": "Visual treatment of the button surface (e.g., filled, outlined, or transparent)."
+    },
+    {
+      "name": "variant",
+      "type": "'primary' | 'secondary' | 'success' | 'warning' | 'danger' | 'info' | 'neutral'",
+      "default": "primary",
+      "description": "Semantic role of the button within the UI (e.g., main action, warning, confirmation)."
+    },
+    {
+      "name": "action",
+      "type": "unknown (consumer-defined)",
+      "optional": true,
+      "agentOnly": true,
+      "description": "Optional metadata representing a system-level action. The structure of this value is defined by the consuming application; PromptUI does not evaluate or dispatch it."
+    },
+    {
+      "name": "href",
+      "type": "string",
+      "optional": true,
+      "description": "Optional href for route-based navigation. When present, the button acts as a link."
+    },
+    {
+      "name": "size",
+      "type": "'small' | 'medium' | 'large'",
+      "default": "medium",
+      "description": "Controls the overall size and padding of the button."
+    },
+    {
+      "name": "type",
+      "type": "'button' | 'submit' | 'reset'",
+      "default": "button",
+      "description": "Native HTML button behavior when inside a form."
+    },
+    {
+      "name": "disabled",
+      "type": "boolean",
+      "default": false,
+      "description": "Disables interaction and applies a muted visual state."
+    },
+    {
+      "name": "fullWidth",
+      "type": "boolean",
+      "default": false,
+      "description": "Expands the button to fill the width of its container."
+    }
+  ],
+  "slots": [
+    {
+      "name": "children",
+      "required": true,
+      "description": "The content of the button, typically text or icons."
+    }
+  ]
+}
