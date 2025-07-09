@@ -139,3 +139,4 @@ dist
 .turbo
 .angular
 .vscode
+.DS_Store
