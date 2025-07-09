@@ -28,25 +28,16 @@ jobs:
         run: |
           git config --global user.email "build@designsystemsmindset.com"
           git config --global user.name "transform"
+          git remote set-url origin https://x-access-token:${{ secrets.TOKEN_TRANSFORM_USER }}@github.com/tonym/prompt-ui.git
 
       - name: Run token transformation
         run: pnpm run transform:tokens
 
       - name: Commit and push changes
         run: |
-          git checkout -B token_transform
+          git fetch origin token_transform || true
+          git checkout token_transform || git checkout -b token_transform
+          git pull origin token_transform || true
           git add .
           git commit --allow-empty -m 'Update transformed tokens'
           git push origin token_transform
-        # Uncomment below and comment out the `git push` line above if you prefer to create a Pull Request instead of direct push:
-        # - name: Create Pull Request
-        #   uses: peter-evans/create-pull-request@v5
-        #   with:
-        #     token: ${{ secrets.TOKEN_TRANSFORM_USER }}
-        #     branch: token_transform
-        #     title: 'Update transformed tokens'
-        #     body: 'Automated token transformation update'
-        #     commit-message: 'Update transformed tokens'
-        #     base: main
-        env:
-          GH_TOKEN: ${{ secrets.TOKEN_TRANSFORM_USER }}
