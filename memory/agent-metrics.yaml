@@ -1,0 +1,13 @@
+# Agent Metrics (manual logging or future automation)
+
+fix-orphans:
+  runs: 3
+  last_run: 2025-07-17
+  success_rate: 66%
+  issues_resolved: 12
+
+token-auditor:
+  runs: 5
+  last_run: 2025-07-15
+  success_rate: 80%
+  issues_resolved: 27

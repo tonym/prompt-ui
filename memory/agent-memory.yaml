@@ -1,0 +1,17 @@
+# Agent Memory Config
+
+analyze-structure:
+  model: Claude 3.7
+  output_style: markdown-checklist
+  memory_scope: component props and shared types
+
+token-auditor:
+  model: GPT-4o
+  memory_scope: theme tokens and usage in components
+  history_retention: true
+
+fix-orphans:
+  model: Claude 3.5
+  output_style: git diff suggestion
+  memory_scope: export graph
+  feedback_logging: true
