@@ -1,0 +1,19 @@
+version: 1
+agents:
+  build:
+    reads:
+      - memory/project-overview.md
+      - memory/codex-guidelines.md
+      - memory/prompts/ticket-to-pr.md
+  test:
+    reads:
+      - memory/codex-guidelines.md
+      - memory/checklists/testing.md
+  docs:
+    reads:
+      - memory/project-overview.md
+      - memory/prompts/docs-update.md
+  research:
+    reads:
+      - memory/project-overview.md
+      - memory/pitfalls.md
