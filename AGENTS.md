@@ -8,6 +8,12 @@ See `memory/index.yaml` for the manifest of agent-readable context.
 **Scripts:** `pnpm i`, `pnpm lint`, `pnpm test` (plus repo-specific e.g., `pnpm test:angular-lib`)
 **PR policy:** Draft until green; conventional commits; map AC → tests in PR body.
 
+### PR updates
+- Policy: Prefer direct push to the PR’s head branch; if not permitted, create a stacked PR targeting that branch.
+- Prompts:
+  - memory/prompts/pr-update-direct.md
+  - memory/prompts/pr-update-stacked.md
+
 ## Test
 **Role:** Generate/maintain unit/integration tests; enforce repo testing rules.
 **Reads:** `memory/codex-guidelines.md`, `memory/checklists/testing.md`
