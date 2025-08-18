@@ -1,5 +1,7 @@
 # Agents
 
+See `memory/index.yaml` for the manifest of agent-readable context.
+
 ## Build (Codex)
 **Role:** Code & tests from tickets; keeps diffs minimal.
 **Reads:** `memory/project-overview.md`, `memory/codex-guidelines.md`, `memory/prompts/ticket-to-pr.md`
