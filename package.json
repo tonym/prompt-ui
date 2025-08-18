@@ -40,6 +40,7 @@
     "test:coverage": "jest --coverage",
     "test:dev": "jest --clearCache && jest --coverage --maxWorkers=50%",
     "format": "prettier --write .",
-    "transform:tokens": "node ./scripts/transformTokens.mjs"
+    "transform:tokens": "node ./scripts/transformTokens.mjs",
+    "test:angular-lib": "jest --config examples/angular-library/jest.config.ts"
   }
 }

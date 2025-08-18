@@ -33,11 +33,13 @@ describe('PromptUIButtonComponent', () => {
     expect(button.textContent).toContain(text);
   });
 
-  it('should apply intent class for secondary variant', () => {
+  it('should apply variant classes for intent and appearance', () => {
     fixture.componentInstance.intent = 'secondary';
+    fixture.componentInstance.appearance = 'outline';
     fixture.detectChanges();
     const button: HTMLButtonElement = fixture.nativeElement.querySelector('button');
     expect(button.className).toContain('intent-secondary');
+    expect(button.className).toContain('appearance-outline');
   });
 
   it('should reflect disabled attribute', () => {
